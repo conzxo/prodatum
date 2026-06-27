@@ -79,7 +79,7 @@ jobs:
         
     - name: Upload a windows build artifact
       if: ${{ matrix.os == 'windows-latest' }}
-      uses: actions/upload-artifact@v4.1.7
+      uses: actions/upload-artifact@v4
       with:
         name: prodatum-${{ matrix.os }}
         path: ./build/${{env.build_type}}/prodatum-win-x64.exe
@@ -90,7 +90,7 @@ jobs:
       
     - name: Upload a linux build artifact
       if: ${{ matrix.os == 'ubuntu-latest' }}
-      uses: actions/upload-artifact@v4.1.7
+      uses: actions/upload-artifact@v4
       with:
         name: prodatum-${{ matrix.os }}
         path: ./build/prodatum-linux-x86_64
@@ -101,7 +101,7 @@ jobs:
       
     - name: Upload a macos build artifact
       if: ${{ matrix.os == 'macos-latest' }}
-      uses: actions/upload-artifact@v4.1.7
+      uses: actions/upload-artifact@v4
       with:
         name: prodatum-${{ matrix.os }}
         path: ./build/prodatum-macos-x64
